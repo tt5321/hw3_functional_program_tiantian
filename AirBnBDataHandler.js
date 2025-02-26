@@ -58,8 +58,8 @@ export function AirBnBDataHandler(sourceFile) {
     function filterListings(filters) {
         const filterData = this.data.then(listings => {
             return listings.filter(l => {
-                return (!filters.minPrice || Number(l.price) >= filters.minPrice) 
-                    && (!filters.maxPrice || Number(l.price) <= filters.maxPrice)
+                return (!filters.minPrice || parseFloat(l.price.slice(1).replace(/,/g, '')) >= filters.minPrice) 
+                    && (!filters.maxPrice || parseFloat(l.price.slice(1).replace(/,/g, '')) <= filters.maxPrice)
                     && (!filters.minRooms || Number(l.bedrooms) >= filters.minRooms) 
                     && (!filters.maxRooms || Number(l.bedrooms) <= filters.maxRooms)
                     && (!filters.minRate || Number(l.review_scores_rating) >= filters.minRate)
@@ -255,19 +255,3 @@ export function AirBnBDataHandler(sourceFile) {
     me.data = Promise.resolve([]);
     return me;
 }
-
-
-// let test = AirBnBDataHandler("./listings.csv");
-// // console.log(test);
-// let data = test.read();
-// // console.log(data);
-// const filters = {minPrice:undefined, maxPrice:undefined, minRooms:1, maxRooms:2, minRate:5};
-// // const filters = {minPrice:undefined, maxPrice:undefined, minRooms:undefined, maxRooms:undefined, minRate:undefined};
-// let filterdata = data.filter(filters);
-// // console.log(filterdata);
-// let s = filterdata.statistic();
-// // console.log(s);
-// let h = filterdata.hosts();
-// let k = data.statistic();
-// k.export("Statistics");
-// // s.export("Statistics").then(()=>h.export("Ranking"));
