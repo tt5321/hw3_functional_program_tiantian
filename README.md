@@ -119,13 +119,6 @@ Counter example:
     }
 ```
 
-## Description of Project
-- Understood the assignment by highlighting keywords
-- Reviewed functional programming concepts
-- Built the AirBnBDataHandler.js
-    - Understood the structures of .csv file
-    - Figured out how to read and parse .csv file by reading
-
 ## Video
 Youtube Link: https://youtu.be/OLjf6rXqwd8
 
@@ -289,10 +282,7 @@ Ensure you are in an ES module-supported environment (Node.js 14+ or `"type": "m
 
 Run:
 
-```
 node airbnb_parser.mjs
-
-```
 
 ---
 
