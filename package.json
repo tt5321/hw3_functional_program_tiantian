@@ -24,6 +24,7 @@
     "eslint": "^9.21.0",
     "eslint-config-prettier": "^10.0.1",
     "globals": "^16.0.0",
+    "jsdoc": "^4.0.4",
     "prettier": "^3.5.2"
   },
   "dependencies": {
