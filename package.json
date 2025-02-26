@@ -1,0 +1,33 @@
+{
+  "name": "hw3_functional_program_tiantian",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tt5321/hw3_functional_program_tiantian.git"
+  },
+  "keywords": [],
+  "author": "Tiantian Ma",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tt5321/hw3_functional_program_tiantian/issues"
+  },
+  "homepage": "https://github.com/tt5321/hw3_functional_program_tiantian#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.21.0",
+    "eslint": "^9.21.0",
+    "eslint-config-prettier": "^10.0.1",
+    "globals": "^16.0.0",
+    "prettier": "^3.5.2"
+  },
+  "dependencies": {
+    "csv-parse": "^5.6.0",
+    "papaparse": "^5.5.2"
+  }
+}
