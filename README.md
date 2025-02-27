@@ -9,7 +9,11 @@ npm install
 ```
 3. To start running the program:
 ```bash
-npm start
+npm start listings.csv
+```
+You may also provide another valid .csv file path
+```bash
+npm start <valid_csv_file_path>
 ```
 
 ## Author:
