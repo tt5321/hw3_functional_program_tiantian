@@ -64,7 +64,6 @@ export function AirBnBDataHandler(sourceFile) {
                     && (!filters.maxRooms || Number(l.bedrooms) <= filters.maxRooms)
                     && (!filters.minRate || Number(l.review_scores_rating) >= filters.minRate)
             });
-            // console.log(r1[0]);
         });
         return {...this, data: filterData};
     }
@@ -118,7 +117,6 @@ export function AirBnBDataHandler(sourceFile) {
                 return (acc + parseFloat(current.price.slice(1).replace(/,/g, ''))); // remove $ and comma, converted to number
             }
         }, 0);
-        // console.log(total);
         return total / roomsList.length;
     }
 
@@ -147,9 +145,6 @@ export function AirBnBDataHandler(sourceFile) {
             const cnt = getCount(listings);
             const rooms = categorizeRooms(listings).getRooms();
             const avgPricePerRooms = computeCategory(rooms, avgPrice);
-            // console.log(cnt);
-            // console.log(rooms[1].price);
-            // console.log(avgPricePerRooms);
             return {TotalListings: cnt, AvgPricePerRooms: avgPricePerRooms};
         });
         return {...this, data: statisData};
@@ -200,11 +195,8 @@ export function AirBnBDataHandler(sourceFile) {
     function computeHosts() {
         const statisData = this.data.then(listings => {
             const hosts = categorizeHosts(listings).getListsPerHostID();
-            // const ranks = ranking(hosts);
             const hosts_cnt = computeCategory(hosts, getCount);
             const ranks = ranking(hosts_cnt);
-            // console.log(hosts_cnt);
-            // console.log(ranks);
             return ranks;
         });
         return {...this, data: statisData};
