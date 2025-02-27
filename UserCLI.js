@@ -9,11 +9,6 @@ import { AirBnBDataHandler } from "./AirBnBDataHandler.js";
  * @returns {void} nothing
  */
 export async function UserCLI (sourceFile) {
-    // Check file path
-    if (typeof(sourceFile) !== "string" || sourceFile.slice(-4) !== ".csv"){
-        throw new Error ("Error: Invalid .csv file path");
-    }
-
     // Main flow of this CLI
     const data = AirBnBDataHandler(sourceFile).read();
     const rl = readline.createInterface({ input, output });
